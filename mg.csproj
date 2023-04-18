@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <ProjectGuid>{3D2D5DB4-B5C8-49AB-9671-40CCF377C9D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>mg</RootNamespace>
+    <AssemblyName>mg</AssemblyName>
+    <GodotProjectGeneratorVersion>1.0.0.0</GodotProjectGeneratorVersion>
+    <GodotUseNETFrameworkRefAssemblies>true</GodotUseNETFrameworkRefAssemblies>
+    <!-- <TargetFrameworkVersion>v4.7</TargetFrameworkVersion> -->
+    <!-- <TargetFramework>net472</TargetFramework> -->
+    <!-- <TargetFramework>netcoreapp3.0</TargetFramework> -->
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <!--The following properties were overriden during migration to prevent errors.
+    Enabling them may require other manual changes to the project and its files.-->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="MusicXml.NET" Version="2.0.1" /> -->
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <!-- <PackageReference Include="Newtonsoft.Json" Version="9.0.1" /> -->
+    <!-- <PackageReference Include="SharpSerializer" Version="3.0.1" /> -->
+    <!-- <PackageReference Include="System.Reflection.DispatchProxy" Version="4.5.1" /> -->
+    <!-- <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" /> -->
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <!-- Manufaktura.Core -->
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\InvocationExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\DynamicallyInvokedAttribute.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\InvokeMethodAspect.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\Invocation.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\BusyIndicatorAspectAttribute.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Aspects\IAspect.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\IXHelper.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XElementHelper.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XHelperExistsResult.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\IXHelperResult.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XHelperBase.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XHelperHasValueResult.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Xml\XAttributeHelper.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\IMeasureDeserializationPerformance.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Extensions\ParserExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\IUnaryExpressionParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\String2ExpressionParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\ConstantExpressionParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\ParserExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\ParameterParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\NegationParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\UnaryExpressionParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Parsers\FunctionParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\SplitExpression.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\PowerExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\LessThanOrEqualExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\ExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\DivideExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\ModuloExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\AndExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\OrExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\LessThanExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\ConditionExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\SubtractExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\EqualExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\MultiplyExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\GreaterThanExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\GreaterThanOrEqualExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\I3ArgumentExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\IExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\ConditionalExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Expressions\Cutters\AddExpressionCutter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\IDependencyResolver.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Reflection\ReflectionExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\ResetableLazy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\Models\Compartment.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Core\ParseExtensions.cs" />
+
+    <!-- Manufaktura.Music -->
+    <Compile Include="Manufaktura\Manufaktura.Music\Generators\RhythmGenerator.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Generators\MelodyGenerator.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Extensions\UsefulExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\RhythmicTrails\PolonaiseRhythmicTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\RhythmicTrails\IRhythmicTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\RhythmicTrails\LimitedPatternsRhythmicTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\MelodicTrails\HeadMotiveTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\MelodicTrails\MovementType.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\MelodicTrails\IMelodicTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\MelodicTrails\ConjunctMovementTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\MelodicTrails\RandomIntervalsMelodicTrail.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\TunedInterval.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\PythagoreanTuning.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\TuningSystem.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\TertianTuning.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\RegularTuningSystem.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Tuning\TemperedTuningSystem.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\RhythmicDuration.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Tempo.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Mode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\CircleOfFifths.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\TunedPitch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MalformedScaleException.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Harmony\TertianHarmony.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Harmony\MajorAndMinorHarmony.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Harmony\IHarmony.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\HistoricIntervalNames.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\UsefulMath.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Pitch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\IHasPitch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Proportion.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Step.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\RhythmicUnit.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Intervals\DiatonicInterval.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Intervals\TuningDictionary.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Intervals\BoundInterval.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Intervals\Interval.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Scale.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Chord.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\Pentatonic\PentatonicMode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MajorOrMinorScale.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MajorScale.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MajorMode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MinorScale.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MinorMode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Music\Model\MajorAndMinor\MajorAndMinorScaleFlags.cs" />
+
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\DrawAllLinesFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\DrawLinesBetweenStavesFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\DemoVersionFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\AddBracketsFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\IFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\DrawMissingStemsFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\DrawBeamsFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Postprocessing\MeasureStaffFragmentPerformanceFinishingTouch.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\ScoreRendererBase.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\ScoreRenderingModes.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Common\IXamlNoteViewer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Common\CommonXamlCode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\ScoreRendererSettings.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\InvalidatingModes.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Snippets\Beams.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Snippets\TupletBracketDefinition.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlSvgScoreRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\Score2HtmlBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlFontInfo.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\IScore2HtmlBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\Score2HtmlCanvasBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\Score2HtmlSvgBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlRadarChartRendererSettings.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlCanvasScoreRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlScoreRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlScoreRendererSettings.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Implementations\HtmlSvgRadarChartRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\ScoreRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Charts\RadarChartRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\PrintSuggestionRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\TimeSignatureRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\RestRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\Slurs\SlurRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\Slurs\DefaultSlurRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\Slurs\BezierSlurRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\DirectionRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\BarlineRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\KeyRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\MusicalSymbolRenderStrategyBase.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\MusicalSymbolRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\ClefRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Rendering\Strategies\NoteRenderStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Lyrics.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Note.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ICanCalculateRenderedBounds.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Exceptions\ScoreException.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\IHasCustomXPosition.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Tuplet.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\GlyphsWithAnchors.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\CutOut.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\OptionalGlyphs.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\MinorClasses.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\Glyph.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\StemBoundaries.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\GlyphDefinition.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\IGlyphBBoxes.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\SMuFL\ISMuFLFontMetadata.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\IHasCustomYPosition.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ViewModel.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\MetronomeDirection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\TimeSignature.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\GroupBarlineType.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Direction.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Assertions\SafetySettings.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Assertions\UnitsAttribute.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Assertions\Units.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\RadarChartSample.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\BeamGroup.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PrintSuggestion.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\LineDictionary.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\StaffSystem.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Key.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Staff.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\NoteOrRestSize.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Ornament.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Mordent.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\StaffFragment.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ICanBeElementOfTuplet.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Measure.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Slur.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\NullMusicalSymbol.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ScoreEncoding.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\IHasDuration.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\MusicalSymbol.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\IRenderedAsTextBlock.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ScorePage.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Score.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\DurationElement.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Part.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PartGroup.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ScoreInfo.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PlaybackSuggestion.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\ICanBeElementOfChord.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Clef.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Events\InvalidateEventArgs.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\BeginningOfMeasurePeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\NextElementPeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\EndOfTupletPeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\HighestNoteInChordPeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\BeginningOfTupletPeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\PreviousElementPeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\PeekStrategies\PeekStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rules\StaffRule.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rules\NoteStemRule.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rules\AutomaticAddMeasuresRule.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rules\BreakSystemRule.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rules\ManualAddMeasuresRule.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Builders\NoteOrRestBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\StaffCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\SystemCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\MusicalSymbolCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\LyricsCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\ItemManagingCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Collections\PartStavesCollection.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Fonts\PolihymniaFontProfile.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Fonts\MusicFontStyles.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Fonts\FontProfile.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Fonts\IMusicFont.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Fonts\PolihymniaFont.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\NoteOrRest.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Rest.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Model\Barline.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\IScoreService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\ScoreService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\IMeasurementService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\MeasurementService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\BeamingService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\AlterationService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\IAlterationService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Services\IBeamingService.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Parser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\XTransformerParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\ScoreParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\RhythmNotesPerMeasureDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\RhythmDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\MelodicContourDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\SimpleDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\RhythmRelativeDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\Digest\LyricsDigestParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\MusicXmlParserState.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\MusicXmlNormalizer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\MusicXmlParser.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\HarmonyParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\KeyParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\GenericMusicXmlParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\DirectionWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\MeasureStyleParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\NoteWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\BarlineWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\BarlineParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\SystemLayoutParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\TimeSignatureWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\DirectionParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\RestWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\PrintSuggestionParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\StavesAttributeParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\ClefWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\PlaybackSuggestionParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\EncodingParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\SoundParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\StaffLayoutParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\MusicXmlWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\AttributeParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\PageLayoutParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\MeasureParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\ClefParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\MusicXmlWritingStrategyBase.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\KeyWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\TimeParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\MusicXmlParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\NoteAndRestParsingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\NoteOrRestWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Parser\MusicXml\Strategies\PrintSuggestionWritingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Quadrangle.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Rectangle.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\PolarPoint.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Size.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Color.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Pen.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\VerticalBounds.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\KolbergColors.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Primitives\Point.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Extensions\XmlExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Extensions\StaffBuilder.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\TimelineElement.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\ScorePlayer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\PlaybackCursorPosition.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\ChannelSelectingTaskScorePlayer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\TaskScorePlayer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Audio\VirtualScorePlayer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\HookDirectionAlgorithm.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\PredefinedMusicFonts.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\DefaultScoreFormatter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\IScoreFormatter.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\IRebeamStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\SimpleRebeamStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\RebeamMode.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\BeatRebeamStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Formatting\LyricsRebeamStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\IoC\ExpressionActivator.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\IoC\ManufakturaResolver.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Linq\ScoreExtensions.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\DirectionDraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\DraggingState.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\DraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\RestDraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\BeamGroupDraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\NoteDraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\IDraggingStrategy.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls\Interactivity\LyricsDraggingStrategy.cs" />
+
+    <Compile Include="Manufaktura\Manufaktura.Controls.Gd\GodotCanvasScoreRenderer.cs" />
+    <Compile Include="Manufaktura\Manufaktura.Controls.Gd\GodotScoreRendererSettings.cs" />
+
+    <Compile Include="ManufakturaCanvas.cs" />
+  </ItemGroup>
+</Project>
